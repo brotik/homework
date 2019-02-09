@@ -1,4 +1,4 @@
-from lib_for_HW2 import total
+from lib_for_HW2 import total_rulons
 
 
-print(total(5, 6, 2.75))
+print(total_rulons(5, 6, 2.75))
