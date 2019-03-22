@@ -2,7 +2,7 @@ import math
 def total_rulons(room_lenght, room_width, room_hight):
 
     """
-    >>> total(5, 6, 2.75)
+    >>> total_rulons(5, 6, 2.75)
     7
     
     :param room_lenght:
