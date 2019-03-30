@@ -1,4 +1,6 @@
 import math
+
+
 def total_rulons(room_lenght, room_width, room_hight):
 
     """
@@ -10,6 +12,7 @@ def total_rulons(room_lenght, room_width, room_hight):
     :param room_hight:
     :return:
     """
+
     reserv = 0.1
     widht_of_rulon = 1.06
     perimetr = int((room_width * 2) + (room_lenght * 2))

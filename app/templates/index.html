@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Calculate rulons</title>
+</head>
+<body>
+<form>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mb-4">Calculate rulons</h1>
+<div class="form-group">
+    <label for="room_lenght">room lenght</label>
+    <input type="text" class="form-control" id="room_lenght" name="room_lenght" value="{{user_input.room_lenght}}">
+</div>
+            <div class="form-group">
+                <label for="room_widht">room widht</label>
+                <input type="text" class="form-control" id="room_widht" name="room_widht" value="{{user_input.room_widht}}">
+                <div class="form-group">
+                    <label for="room_hight">room_hight</label>
+                    <input type="text" class="form-control" id="room_hight" name="room_hight" value="{{user_input.room_hight}}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
+</body>
+</html>
