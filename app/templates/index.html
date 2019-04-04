@@ -1,33 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<!
+<html>
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Calculate rulons</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form>
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="mb-4">Calculate rulons</h1>
-<div class="form-group">
-    <label for="room_lenght">room lenght</label>
-    <input type="text" class="form-control" id="room_lenght" name="room_lenght" value="{{user_input.room_lenght}}">
-</div>
-            <div class="form-group">
-                <label for="room_widht">room widht</label>
-                <input type="text" class="form-control" id="room_widht" name="room_widht" value="{{user_input.room_widht}}">
+            <h1>{{title}}</h1>
+
+            <form>
                 <div class="form-group">
-                    <label for="room_hight">room_hight</label>
-                    <input type="text" class="form-control" id="room_hight" name="room_hight" value="{{user_input.room_hight}}">
+                    <label for="room_lenght"> Lenght room </label>
+                    <input id="room_lenght" class="form-control" name="room_lenght" type="text" value="{{room_lenght}}"
+                           placeholder="Lenght room in metres please" required>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="room_widht"> Widht room</label>
+                    <input id="room_widht" class="form-control" name="room_widht" type="text" value="{{room_widht}}"
+                           placeholder="Widht room in metres please" required>
+                </div>
+                <div class="form-group">
+                    <label for="room_height"> Height room</label>
+                    <input id="room_height" class="form-control" name="room_height" type="text" value="{{room_height}}"
+                           placeholder="Height room in metres please" required>
+                </div>
+                <button class="btn btn-primary">Calculate</button>
+            </form>
+
+            {% if total_rulons %}
+
+            <div> Total rulons: {{total_rulons}} </div>
+
+            {% endif %}
 
         </div>
     </div>
 </div>
-    <button type="submit" class="btn btn-primary">Calculate</button>
-</form>
 </body>
 </html>

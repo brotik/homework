@@ -9,17 +9,22 @@ def start():
     app = Flask(__name__)
 
     @app.route('/')
-    def index():
-        if not request.args:
-            return render_template('index.html', user_input={})
+    def frontpage():
+        room_length = request.args.get('room_length')
+        room_widht = request.args.get('room_widht')
+        room_height = request.args.get('room_height')
 
-        rolls_required = total_rulons('room_lenght', 'room_width', 'room_hight')
-        return render_template('index.html', user_input=request.args, rolls_required=rolls_required)
+        if room_length and room_height and room_widht:
+            rolls = total_rulons(float(room_length), float(room_widht), float(room_height))
+            return render_template('index.html', title='Calculate wallpaper', total_rulons=rolls)
+        return render_template('index.html', title='Calculate wallpaper')
 
     if os.getenv('APP_ENV') == 'PROD' and os.getenv('PORT'):
         waitress.serve(app, port=os.getenv('PORT'))
     else:
         app.run(port=9876, debug=True)
+
+    app.run(port=9876, debug=True)
 
 
 if __name__ == '__main__':
