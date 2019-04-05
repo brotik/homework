@@ -1,4 +1,4 @@
-from app import main
+from app import HW2_with_func
 
 if __name__ == '__main__':
-    main.start()
+    HW2_with_func.start()

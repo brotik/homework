@@ -10,12 +10,12 @@ def start():
 
     @app.route('/')
     def frontpage():
-        room_length = request.args.get('room_length')
+        room_lenght = request.args.get('room_lenght')
         room_widht = request.args.get('room_widht')
         room_height = request.args.get('room_height')
 
-        if room_length and room_height and room_widht:
-            rolls = total_rulons(float(room_length), float(room_widht), float(room_height))
+        if room_lenght and room_height and room_widht:
+            rolls = total_rulons(float(room_lenght), float(room_widht), float(room_height))
             return render_template('index.html', title='Calculate wallpaper', total_rulons=rolls)
         return render_template('index.html', title='Calculate wallpaper')
 
